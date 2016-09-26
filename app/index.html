@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>git</title>
+    <title>Willy's Brewing Pre-Equity</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -12,87 +12,244 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/ripples.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <!-- fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- endfonts -->
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">git</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-          
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-          
+    <div id="main-nav" class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="javascript:void(0)">Willy's</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="javascript:void(0)">Link</a></li>
+            <li><a href="javascript:void(0)">Link</a></li>
+            <li><a href="javascript:void(0)">Link</a></li>
+          </ul>
         </div>
       </div>
-
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
-      </div>
     </div>
-    
+
+    <!-- <div id="carousel-header-generic" class="header carousel slide" data-ride="carousel">
+
+        <div class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-header-generic" data-slide-to="0" class=""></li>
+                <li data-target="#carousel-header-generic" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-header-generic" data-slide-to="2" class="active"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item">
+                    <div class="page-header header-filter" style="background-image: url('images/group.jpg');">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 text-left">
+                                    <h1 class="title">Material Kit PRO</h1>
+                                    <h4>Dolce &amp; Gabbana is a luxury Italian fashion house founded in 1985 in Legnano by Italian designers Domenico Dolce and Stefano Gabbana. The two met in Milan in 1980 and designed for the same fashion house.</h4>
+                                    <br>
+
+                                    <div class="buttons">
+                                        <a href="#pablo" class="btn btn-primary btn-lg">
+                                            Read More
+                                        </a>
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </a>
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                            <i class="fa fa-get-pocket"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="page-header header-filter" style="background-image: url('images/friends.jpg');">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 text-center">
+                                    <h1 class="title">Material Kit PRO</h1>
+                                    <h4>Dolce &amp; Gabbana is a luxury Italian fashion house founded in 1985 in Legnano by Italian designers Domenico Dolce and Stefano Gabbana. The two met in Milan in 1980 and designed for the same fashion house.</h4>
+                                    <br>
+                                    <h6>Connect with us on:</h6>
+                                    <div class="buttons">
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </a>
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="item active">
+                    <div class="page-header header-filter" style="background-image: url('images/beer.jpg');">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7 col-md-offset-5 text-right">
+                                    <h1 class="title">New Collection 50% Off</h1>
+                                    <h4>There's no doubt that Tesla is delighted with the interest, but the data also raises a few questions. How long will it take for Tesla to fulfill all those extra orders?</h4>
+                                    <br>
+
+                                    <div class="buttons">
+                                        <a href="#pablo" class="btn btn-white btn-simple btn-lg">
+                                            <i class="material-icons">share</i> Share Offer
+                                        </a>
+                                        <a href="#pablo" class="btn btn-danger btn-lg">
+                                            <i class="material-icons">shopping_cart</i> Shop Now
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a class="left carousel-control" href="#carousel-header-generic" data-slide="prev">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </a>
+            <a class="right carousel-control" href="#carousel-header-generic" data-slide="next">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+        </div>
+    </div> -->
+    <div class="page-header header-filter" data-parallax="active" style="background-image: url(images/open.jpg); transform: translate3d(0px, 0px, 0px);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" class="text-center">
+                    <h1 class="title">Llega <span class="font-brand">Willy's</span></h1>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                    <br>
+                    <a href="" class="btn btn bg-white btn-round btn-lg">
+                        ¡Conoce más! <i class="material-icons">done</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Ipsum dolor sit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="" class="btn btn-primary">
+                        ¡Conoce más!
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <img style="margin:0 auto;" class="img-responsive" src="images/beer-icon-1.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img style="margin:0 auto;" class="img-responsive" src="images/beer-icon-2.png">
+                </div>
+                <div class="col-sm-6">
+                    <h3>Consectetur adipiscing elit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="" class="btn btn-primary">
+                        ¡Conoce más!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section full bg-white">
+        <div class="row margin0">
+            <div class="col-sm-6 padding0">
+                <div class="display" style="background-image: url(images/cheers.jpg); transform: translate3d(0px, 0px, 0px);"></div>
+            </div>
+            <div class="col-sm-6">
+                <div class="content padding0">
+                    <h3>Consectetur adipiscing elit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="" class="btn btn-primary">
+                        ¡Conoce más!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Willy's Brewing Co</p>
+        </div>
+    </footer>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap-material-design/dist/js/material.js"></script>
+    <script src="/bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+    <script src="/bower_components/headroom.js/dist/headroom.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap/js/affix.js"></script>
-    <script src="/bower_components/bootstrap/js/alert.js"></script>
-    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
-    <script src="/bower_components/bootstrap/js/modal.js"></script>
-    <script src="/bower_components/bootstrap/js/transition.js"></script>
-    <script src="/bower_components/bootstrap/js/button.js"></script>
-    <script src="/bower_components/bootstrap/js/popover.js"></script>
-    <script src="/bower_components/bootstrap/js/carousel.js"></script>
-    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap/js/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/tab.js"></script>
-    <!-- endbuild -->
-    
+
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
