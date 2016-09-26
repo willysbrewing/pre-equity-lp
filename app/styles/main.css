@@ -146,6 +146,20 @@ a:hover, a:focus{
 .bg-blue-2{background-color: #39c5ff !important;}
 .bg-blue-3{background-color: #3870ff !important;}
 .bg-blue-4{background-color: #5544ff !important;}
+.bg-green-50{background-color: #E8F5E9 !important;}
+.bg-green-100{background-color: #C8E6C9 !important;}
+.bg-green-200{background-color: #A5D6A7 !important;}
+.bg-green-300{background-color: #81C784 !important;}
+.bg-green-400{background-color: #66BB6A !important;}
+.bg-green-500{background-color: #4CAF50 !important;}
+.bg-green-600{background-color: #43A047 !important;}
+.bg-green-700{background-color: #388E3C !important;}
+.bg-green-800{background-color: #2E7D32 !important;}
+.bg-green-900{background-color: #1B5E20 !important;}
+.bg-green-a100{background-color: #B9F6CA !important;}
+.bg-green-a200{background-color: #69F0AE !important;}
+.bg-green-a400{background-color: #00E676 !important;}
+.bg-green-a700{background-color: #00C853 !important;}
 
 /* Colors */
 .color-white{color: #fff !important;}
@@ -155,8 +169,27 @@ a:hover, a:focus{
 .color-blue-2{color: #39c5ff !important;}
 .color-blue-3{color: #3870ff !important;}
 .color-blue-4{color: #5544ff !important;}
+.color-green-50{color: #E8F5E9 !important;}
+.color-green-100{color: #C8E6C9 !important;}
+.color-green-200{color: #A5D6A7 !important;}
+.color-green-300{color: #81C784 !important;}
+.color-green-400{color: #66BB6A !important;}
+.color-green-500{color: #4CAF50 !important;}
+.color-green-600{color: #43A047 !important;}
+.color-green-700{color: #388E3C !important;}
+.color-green-800{color: #2E7D32 !important;}
+.color-green-900{color: #1B5E20 !important;}
+.color-green-a100{color: #B9F6CA !important;}
+.color-green-a200{color: #69F0AE !important;}
+.color-green-a400{color: #00E676 !important;}
+.color-green-a700{color: #00C853 !important;}
 
 /* CTA */
+.btn{
+    font: 300 14px/20px Roboto,sans-serif;
+}
+
+
 .cta{
     text-align: center;
     margin: 60px 0 0 0;
@@ -232,6 +265,7 @@ a:hover, a:focus{
 }
 
 .navbar .navbar-brand{
+    float: right;
     font-family: 'Pacifico';
     padding: 0;
     height: auto;
@@ -244,32 +278,14 @@ a:hover, a:focus{
     background-color: rgba(0,0,0,0);
 }
 
-.navbar-default .navbar-toggle{
-  border: none;
-  color: #fff;
+.navbar .navbar-toggle{
+  float: left;
 }
 
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+.navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus{
   background-color: transparent;
 }
 
-.navbar-default .navbar-toggle .icon-bar{
-  background-color: #fff;
-}
-.navbar-default .navbar-nav > li > a{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-.navbar-default .navbar-nav li > a.active, .navbar-default .navbar-nav li > a.active:hover, .navbar-default .navbar-nav li > a.active:focus{
-    color: #fff;
-    background-color: #fff;
-}
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
-    color: #fff;
-}
 
 @media (min-width: 768px){
 
@@ -315,7 +331,7 @@ a:hover, a:focus{
 }
 .page-header .title {
   color: #FFFFFF;
-  font-size: 80px;
+  font-size: 70px;
 }
 .page-header.header-small {
   height: 65vh;
@@ -344,156 +360,32 @@ a:hover, a:focus{
   z-index: 2;
   position: relative;
 }
-.header-filter[filter-color="purple"]:after, .header-filter[filter-color="primary"]:after {
-  background: rgba(225, 190, 231, 0.56);
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(60deg, rgba(225, 190, 231, 0.56), rgba(186, 104, 200, 0.95));
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(60deg, rgba(225, 190, 231, 0.56), rgba(186, 104, 200, 0.95));
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(60deg, rgba(225, 190, 231, 0.56), rgba(186, 104, 200, 0.95));
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(60deg, rgba(225, 190, 231, 0.56), rgba(186, 104, 200, 0.95));
-  /* Standard syntax */
-}
-.header-filter[filter-color="blue"]:after, .header-filter[filter-color="info"]:after {
-  background: rgba(178, 235, 242, 0.56);
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(60deg, rgba(178, 235, 242, 0.56), rgba(77, 208, 225, 0.95));
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(60deg, rgba(178, 235, 242, 0.56), rgba(77, 208, 225, 0.95));
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(60deg, rgba(178, 235, 242, 0.56), rgba(77, 208, 225, 0.95));
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(60deg, rgba(178, 235, 242, 0.56), rgba(77, 208, 225, 0.95));
-  /* Standard syntax */
-}
-.header-filter[filter-color="green"]:after, .header-filter[filter-color="success"]:after {
-  background: rgba(165, 214, 167, 0.56);
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(60deg, rgba(165, 214, 167, 0.56), rgba(102, 187, 106, 0.95));
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(60deg, rgba(165, 214, 167, 0.56), rgba(102, 187, 106, 0.95));
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(60deg, rgba(165, 214, 167, 0.56), rgba(102, 187, 106, 0.95));
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(60deg, rgba(165, 214, 167, 0.56), rgba(102, 187, 106, 0.95));
-  /* Standard syntax */
-}
-.header-filter[filter-color="orange"]:after, .header-filter[filter-color="warning"]:after {
-  background: rgba(255, 224, 178, 0.56);
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(60deg, rgba(255, 224, 178, 0.56), rgba(255, 183, 77, 0.95));
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(60deg, rgba(255, 224, 178, 0.56), rgba(255, 183, 77, 0.95));
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(60deg, rgba(255, 224, 178, 0.56), rgba(255, 183, 77, 0.95));
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(60deg, rgba(255, 224, 178, 0.56), rgba(255, 183, 77, 0.95));
-  /* Standard syntax */
-}
-.header-filter[filter-color="red"]:after, .header-filter[filter-color="danger"]:after {
-  background: rgba(239, 154, 154, 0.56);
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(60deg, rgba(239, 154, 154, 0.56), rgba(239, 83, 80, 0.95));
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(60deg, rgba(239, 154, 154, 0.56), rgba(239, 83, 80, 0.95));
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(60deg, rgba(239, 154, 154, 0.56), rgba(239, 83, 80, 0.95));
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(60deg, rgba(239, 154, 154, 0.56), rgba(239, 83, 80, 0.95));
-  /* Standard syntax */
-}
-.header-filter[filter-color="rose"]:after {
-  background: rgba(248, 187, 208, 0.56);
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(60deg, rgba(248, 187, 208, 0.56), rgba(240, 98, 146, 0.95));
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(60deg, rgba(248, 187, 208, 0.56), rgba(240, 98, 146, 0.95));
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(60deg, rgba(248, 187, 208, 0.56), rgba(240, 98, 146, 0.95));
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(60deg, rgba(248, 187, 208, 0.56), rgba(240, 98, 146, 0.95));
-  /* Standard syntax */
+
+@media (max-width: 767px) {
+    .page-header .title {
+      font-size: 50px;
+    }
 }
 
 .clear-filter:before {
   display: none;
 }
 
-/* Carousel */
-.carousel .carousel-control.left, .carousel .carousel-control.right {
-  background-image: none;
-}
-.carousel .carousel-control.right i {
-  right: 25px;
-}
-.carousel .item {
-  text-align: center;
-}
-.carousel.carousel-full-nagivation .carousel-control {
-  width: 50%;
-}
-.carousel.carousel-full-nagivation .carousel-control.left, .carousel.carousel-full-nagivation .carousel-control.right {
-  background-image: none;
-}
-.carousel.carousel-full-nagivation .carousel-control .material-icons,
-.carousel.carousel-full-nagivation .carousel-control .fa {
-  display: none;
-}
-.carousel.carousel-full-nagivation .left {
-  cursor: url("../img/arrow-left.png"), url("../img/arrow-left.cur"), default !important;
-}
-.carousel.carousel-full-nagivation .right {
-  cursor: url("../img/arrow-right.png"), url("../img/arrow-right.cur"), default !important;
-}
-.carousel .carousel-control.left {
-  left: 25px;
-}
-.carousel .carousel-control.right {
-  left: auto;
-}
-.carousel .carousel-control .material-icons {
-  position: absolute;
-  top: 50%;
-  z-index: 5;
-  display: inline-block;
-  font-size: 50px;
-  margin-top: -15px;
-}
-.carousel .carousel-indicators {
-  bottom: 5px;
-}
-.carousel .carousel-indicators li,
-.carousel .carousel-indicators .active {
-  margin: 11px 10px;
-}
-.carousel .carousel-indicators li {
-  background: #FFFFFF;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 2px;
-}
-.carousel .carousel-indicators .active {
-  margin-top: 10px;
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-}
-.carousel .carousel-caption {
-  padding-bottom: 45px;
-}
-.carousel .carousel-caption .material-icons {
-  position: relative;
-  top: 5px;
-}
-
 
 /* Section */
 .section{
     padding: 80px 0;
+}
+
+.section .btn{
+    padding: 0;
+}
+
+@media (max-width: 767px) {
+    /* Section */
+    .section{
+        padding: 20px 0;
+    }
 }
 
 /* Full */
