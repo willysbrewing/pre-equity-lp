@@ -5,7 +5,8 @@
     "bootstrap": "~3.3.5",
     "modernizr": "~2.8.1",
     "bootstrap-material-design": "0.5.10",
-    "headroom.js": "https://unpkg.com/headroom.js/bower.zip"
+    "headroom.js": "https://unpkg.com/headroom.js/bower.zip",
+    "typed.js": "^1.1.4"
   },
   "overrides": {
     "bootstrap": {
