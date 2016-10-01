@@ -126,7 +126,6 @@ a:hover, a:focus{
   transform: skewX(-60deg);
 }
 
-
 /* Background adjusts */
 .bg-pos-x-25{background-position: 25% 0 !important;}
 .bg-pos-x-50{background-position: 50% 0 !important;}
@@ -137,11 +136,9 @@ a:hover, a:focus{
 .bg-pos-y-75{background-position: 0 75% !important;}
 .bg-pos-y-100{background-position: 0 100% !important;}
 
-
 /* Background Colors */
 .bg-white{background-color: rgba(255,255,255,1) !important;}
 .bg-black{background-color: rgba(0,0,0,1) !important;}
-.bg-gray-1{background-color: #555 !important;}
 .bg-blue-1{background-color: #37fff1 !important;}
 .bg-blue-2{background-color: #39c5ff !important;}
 .bg-blue-3{background-color: #3870ff !important;}
@@ -160,6 +157,16 @@ a:hover, a:focus{
 .bg-green-a200{background-color: #69F0AE !important;}
 .bg-green-a400{background-color: #00E676 !important;}
 .bg-green-a700{background-color: #00C853 !important;}
+.bg-grey-50{background-color: #FAFAFA !important;}
+.bg-grey-100{background-color: #F5F5F5 !important;}
+.bg-grey-200{background-color: #EEEEEE !important;}
+.bg-grey-300{background-color: #E0E0E0 !important;}
+.bg-grey-400{background-color: #BDBDBD !important;}
+.bg-grey-500{background-color: #9E9E9E !important;}
+.bg-grey-600{background-color: #757575 !important;}
+.bg-grey-700{background-color: #616161 !important;}
+.bg-grey-800{background-color: #424242 !important;}
+.bg-grey-900{background-color: #212121 !important;}
 
 /* Colors */
 .color-white{color: #fff !important;}
@@ -183,6 +190,16 @@ a:hover, a:focus{
 .color-green-a200{color: #69F0AE !important;}
 .color-green-a400{color: #00E676 !important;}
 .color-green-a700{color: #00C853 !important;}
+.color-grey-50{color: #FAFAFA !important;}
+.color-grey-100{color: #F5F5F5 !important;}
+.color-grey-200{color: #EEEEEE !important;}
+.color-grey-300{color: #E0E0E0 !important;}
+.color-grey-400{color: #BDBDBD !important;}
+.color-grey-500{color: #9E9E9E !important;}
+.color-grey-600{color: #757575 !important;}
+.color-grey-700{color: #616161 !important;}
+.color-grey-800{color: #424242 !important;}
+.color-grey-900{color: #212121 !important;}
 
 /* CTA */
 .btn{
@@ -316,6 +333,7 @@ a:hover, a:focus{
 
 .page-header {
     height: 100vh;
+    min-height: 480px;
     background-position: center center;
     background-size: cover;
     margin: 0;
@@ -354,7 +372,7 @@ a:hover, a:focus{
   content: "";
 }
 .header-filter::before {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .header-filter .container {
   z-index: 2;
@@ -377,15 +395,51 @@ a:hover, a:focus{
     padding: 80px 0;
 }
 
-.section .btn{
-    padding: 0;
+.section .section-header{
+  text-align: center;
+  margin: 0 0 60px 0;
 }
+
+.section .section-header h3{
+  text-transform: uppercase;
+  font: 600 48px "Roboto",sans-serif;
+}
+
+.section .section-header p{
+  font: 300 20px "Roboto",sans-serif;
+}
+
+.section .section-header .divider{
+  content: '';
+  width: 160px;
+  height: 2px;
+}
+
 
 @media (max-width: 767px) {
     /* Section */
     .section{
-        padding: 20px 0;
+      padding: 40px 0;
     }
+    .section .section-header{
+      margin: 0;
+    }
+    .section .section-header h3{
+      font-size: 24px;
+    }
+
+    .section .section-header p{
+      font-size: 14px;
+    }
+}
+
+/* Product */
+.section.product{
+
+}
+
+.section.product .feat{
+  margin: 40px 0;
 }
 
 /* Full */
@@ -399,10 +453,68 @@ a:hover, a:focus{
 }
 
 .section.full .content{
-    padding: 80px 40px;
+    padding: 120px 40px;
 }
 
+@media (max-width: 767px) {
+  .section.full .display{
+      height: 180px;
+  }
+  .section.full .content{
+      padding: 40px 20px;
+  }
+}
 
+/* Night */
+.section.nights{
+
+}
+
+.section.nights iframe{
+  width: 100%;
+  height: 100%;
+  min-width: 560px;
+  min-height: 315px;
+}
+
+@media (max-width: 767px) {
+  /* Section */
+  .section.nights{
+  }
+  .section.nights iframe{
+    min-width: auto;
+    min-height: auto;
+  }
+}
+
+/* Benefits */
+.section.benefits{
+
+}
+
+.section.benefits .card{
+}
+
+.section.benefits .card .benefit-info ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.section.benefits .card .benefit-info ul li{
+  margin: 20px 0;
+}
+
+.section.benefits .card .benefit-info ul li h6{
+  font-size: 16px;
+}
+
+.section.benefits .card .benefit-optin{
+
+}
+
+.section.benefits .card .benefit-optin .price{
+  font-size: 28px;
+}
 
 /* footer */
 footer {
