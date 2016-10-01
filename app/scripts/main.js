@@ -2,6 +2,7 @@
 (function() {
 
     $(function(){
+        console.log = function() {}
 
         /* Functions */
         function getCookie(cname) {
@@ -22,6 +23,12 @@
             document.cookie = cname + '=' + cvalue + '; ' + expires;
         }
 
+        function boostHeader(){
+          //$('#header').addClass("gradient");
+          $('#header').addClass('changed');
+          $('#header .cta').css('opacity', '1');
+        }
+
         // NAVBAR Toggle Bug
         //$('.navbar-toggle').on('click', function () {
         //  $($(this).data('target')).collapse('toggle');
@@ -30,6 +37,16 @@
         // Do not delay load of page with async functionality: Wait for window load
         window.addEventListener('load',function(){
 
+            // init material
+            $.material.init()
+
+            // init nav
+            var myElement = document.querySelector('#main-nav');
+            Headroom.options.offset = 70;
+            var headroom  = new Headroom(myElement);
+            headroom.init();
+
+            // init smooth links
             $('a.smooth').click(function(e) {
                 e.preventDefault();
                 var $link = $(this);
@@ -40,13 +57,20 @@
                 return false;
             });
 
-            // material
-            $.material.init()
+            // init header typewriter
+            $('#header #header-title').typed({
+              stringsElement: $('#header #header-typed-title'),
+              typeSpeed: 100,
+              startDelay: 50,
+              callback: function(){
+                $('#header #header-subtitle').typed({
+                  stringsElement: $('#header #header-typed-subtitle'),
+                  typeSpeed: 100,
+                  callback: boostHeader
+                });
+              }
+            });
 
-            var myElement = document.querySelector('#main-nav');
-            Headroom.options.offset = 70;
-            var headroom  = new Headroom(myElement);
-            headroom.init();
 
 
         }); // End of window load
