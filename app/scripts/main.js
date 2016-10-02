@@ -27,6 +27,7 @@
           //$('#header').addClass("gradient");
           $('#header').addClass('changed');
           $('#header .cta').css('opacity', '1');
+          //$('#header .countdown').css('opacity', '1');
         }
 
         // NAVBAR Toggle Bug
@@ -71,7 +72,12 @@
               }
             });
 
-
+            // countdown
+            /*$("#promo .countdown").countdown("2016/11/01", function(event) {
+              $(this).text(
+                event.strftime('%D days %H:%M:%S')
+              );
+            });*/
 
         }); // End of window load
 
