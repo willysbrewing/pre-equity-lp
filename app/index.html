@@ -48,8 +48,8 @@
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#product" class="smooth">Beer</a></li>
-            <li><a href="#nights" class="smooth">Nights</a></li>
+            <li><a href="#what" class="smooth">Beer</a></li>
+            <li><a href="#bemore" class="smooth">Nights</a></li>
             <li><a href="#benefits" class="smooth">Invierte</a></li>
           </ul>
         </div>
@@ -88,7 +88,7 @@
             <p class="claim">¡Tú puedes ser parte de Willy's!</p>
           </div>
           <div class="col-sm-6">
-            <a class="center btn btn-lg" href="">Más información</a>
+            <a class="center btn btn-lg smooth" href="#benefits">Más información</a>
           </div>
         </div>
       </div>
@@ -182,7 +182,7 @@
     endproduct -->
 
     <!-- fullone -->
-    <section class="section full bg-white">
+    <section id="what" class="section full bg-white">
         <div class="row margin0">
             <div class="col-sm-6 padding0">
               <div class="display" style="background-image: url(images/beer.jpg); transform: translate3d(0px, 0px, 0px);"></div>
@@ -190,39 +190,104 @@
             <div class="col-sm-6">
               <div class="content padding0">
                 <h3 class="title">Willy's es <strong>natural</strong></h3>
-                <p class="body">Willy's no es artesanal ni industrial, es <strong>natural</strong>.</p>
+                <p class="body">Willy's no es una cerveza artesanal ni industrial, es <strong>natural</strong>.</p>
                 <p class="body">Willy's es accesible a cualquiera, nada gourmet. Willy's va a democratizar la cerveza natural.</p>
-                <a href="#nights" class="btn btn-lg btn-raised bg-amber-700 color-white smooth">
-                    ¡Conoce más!
+                <a class="btn btn-lg btn-raised bg-amber-700 color-white" role="button" data-toggle="collapse" href="#collapse-natural" aria-expanded="false" aria-controls="collapse-natural">
+                    ¿Cómo hacemos Willy's?
                 </a>
               </div>
             </div>
         </div>
     </section>
     <!-- endfullone -->
+    <!-- colapse-natural -->
+    <div class="collapse" id="collapse-natural">
+      <div class="collapse-section parallax-shadow">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="content">
+                <img class="pull-left" src="images/barley.png">
+                <h4 class="pull-left">Materia Prima</h4>
+                <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="content">
+                <img class="pull-left" src="images/barrel-1.png">
+                <h4 class="pull-left">Elaboración</h4>
+                <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="content">
+                <img class="pull-left" src="images/beer-icon-1.png">
+                <h4 class="pull-left">Distribución</h4>
+                <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="content">
+                <img class="pull-left" src="images/opener.png">
+                <h4 class="pull-left">Punto de venta</h4>
+                <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- endcollape-natural -->
+
 
     <!-- fulltwo -->
-    <section class="section full bg-white">
+    <section id="bemore" class="section full bg-white">
         <div class="row margin0">
           <div class="col-sm-6 padding0 visible-xs">
-            <div class="display" style="background-image: url(images/friends.jpg);"></div>
+            <div class="display" style="background-image: url(images/concert.jpg);"></div>
           </div>
           <div class="col-sm-6">
             <div class="content padding0">
-              <h3 class="title">Willy's es <strong>natural</strong></h3>
-              <p class="body">Willy's no es artesanal ni industrial, es <strong>natural</strong>.</p>
-              <p class="body">Willy's es accesible a cualquiera, nada gourmet. Willy's va a democratizar la cerveza natural.</p>
-              <a href="#nights" class="btn btn-lg btn-raised bg-amber-700 color-white smooth">
+              <h3 class="title">Willy's es <strong>más</strong></h3>
+              <p class="body">Hacer una buena cerveza no es <strong>suficiente</strong></p>
+              <p class="body">Willy's Nights, Be Willy's, Willy's ....</p>
+              <a class="btn btn-lg btn-raised bg-amber-700 color-white" data-toggle="collapse" href="#collapse-nights" aria-expanded="false" aria-controls="collapse-nights">
                   ¡Conoce más!
               </a>
             </div>
           </div>
           <div class="col-sm-6 padding0 hidden-xs">
-            <div class="display" style="background-image: url(images/cheers.jpg);"></div>
+            <div class="display" style="background-image: url(images/concert.jpg);"></div>
           </div>
         </div>
     </section>
     <!-- endfulltwo -->
+    <!-- collapse-nights-->
+    <div class="collapse" id="collapse-nights">
+      <div class="collapse-section parallax-shadow">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="material-shadow" style="min-height:250px;border-radius:5px;background-image: url('images/willys2.jpg');background-size:cover;background-position:center center;"></div>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+              <div class="content">
+                <h4>Willy's es más</h4>
+                <ul>
+                  <li><span class="color-amber-900">Be Willy's</span>: lorem ipsum dolor sit amet, consecute.</li>
+                  <li><span class="color-amber-900">Willy's Nights</span>: lorem ipsum dolor sit amet, consecute</li>
+                  <li><span class="color-amber-900">Willy's Happy Birthday</span>: lorem ipsum dolor sit amet, consecute.</li>
+                  <li><span class="color-amber-900">Willy's Online</span>: lorem ipsum dolor sit amet, consecute.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- endcollapse-nights -->
 
     <!-- fullthree -->
     <section class="section full bg-white">
@@ -232,11 +297,11 @@
             </div>
             <div class="col-sm-6">
               <div class="content padding0">
-                <h3 class="title">Willy's es <strong>más</strong></h3>
+                <h3 class="title"><strong>Tú</strong> eres Willy's</h3>
                 <p class="body">Willy's no es artesanal ni industrial, es <strong>natural</strong>.</p>
                 <p class="body">Willy's es accesible a cualquiera, nada gourmet. Willy's va a democratizar la cerveza natural.</p>
-                <a href="#nights" class="btn btn-lg btn-raised bg-amber-700 color-white smooth">
-                    ¡Conoce más!
+                <a href="#benefits" class="btn btn-lg btn-raised bg-amber-700 color-white smooth">
+                    ¿Cómo invierto?
                 </a>
               </div>
             </div>
@@ -244,7 +309,7 @@
     </section>
     <!-- endfullthree -->
 
-    <!-- nights -->
+    <!-- nights
     <section id="nights" class="section nights">
       <div class="container">
         <div class="section-header">
@@ -261,10 +326,10 @@
         </div>
       </div>
     </section>
-    <!-- endnights -->
+    endnights -->
 
     <!-- benefits -->
-    <section id="benefits" class="section benefits bg-white">
+    <section id="benefits" class="section benefits">
       <div class="container-fluid">
         <div class="section-header">
           <h3>Invierte en Willy's</h3>
@@ -276,10 +341,11 @@
 
                 <div class="benefit-info padding-20">
                   <div class="clearfix">
-                    <h3 class="pull-left">Level 0</h3>
+                    <h3 class="pull-left">Socio</h3>
                     <img class="pull-right" width="50px;" src="images/beer-1.png">
                   </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consecte</p>
+                  <div class="divider bg-amber-700"></div>
                   <div class="more">
                     <ul>
                         <li><h6>Curriculum</h6>
@@ -298,10 +364,10 @@
                 <div class="bg-grey-200">
                   <div class="benefit-optin padding-20 clearfix">
                     <div class="price pull-left">
-                      <p>+50&euro;</p>
+                      <p>25&euro;</p>
                     </div>
                     <div class="pull-right">
-                      <a class="btn btn-lg btn-raised pull-right btn-info" href="">
+                      <a class="btn btn-lg btn-raised pull-right bg-amber-700 color-white smooth" href="#form">
                         Invierto
                       </a>
                     </div>
@@ -315,10 +381,11 @@
 
                 <div class="benefit-info padding-20">
                   <div class="clearfix">
-                    <h3 class="pull-left">Level 1</h3>
+                    <h3 class="pull-left">Accionista</h3>
                     <img class="pull-right" width="50px;" src="images/beer-2.png">
                   </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consecte</p>
+                  <div class="divider bg-amber-700"></div>
                   <div class="more">
                     <ul>
                         <li><h6>Curriculum</h6>
@@ -337,10 +404,10 @@
                 <div class="bg-grey-200">
                   <div class="benefit-optin padding-20 clearfix">
                     <div class="price pull-left">
-                      <p>+100&euro;</p>
+                      <p>50&euro;</p>
                     </div>
                     <div class="pull-right">
-                      <a class="btn btn-lg btn-raised pull-right btn-info" href="">
+                      <a class="btn btn-lg btn-raised pull-right bg-amber-700 color-white smooth" href="#form">
                         Invierto
                       </a>
                     </div>
@@ -354,10 +421,11 @@
 
                 <div class="benefit-info padding-20">
                   <div class="clearfix">
-                    <h3 class="pull-left">Level 2</h3>
+                    <h3 class="pull-left">Accionista Destacado</h3>
                     <img class="pull-right" width="50px;" src="images/beer-3.png">
                   </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consecte</p>
+                  <div class="divider bg-amber-700"></div>
                   <div class="more">
                     <ul>
                         <li><h6>Curriculum</h6>
@@ -376,10 +444,10 @@
                 <div class="bg-grey-200">
                   <div class="benefit-optin padding-20 clearfix">
                     <div class="price pull-left">
-                      <p>+500&euro;</p>
+                      <p>200&euro;</p>
                     </div>
                     <div class="pull-right">
-                      <a class="btn btn-lg btn-raised pull-right btn-info" href="">
+                      <a class="btn btn-lg btn-raised pull-right bg-amber-700 color-white smooth" href="#form">
                         Invierto
                       </a>
                     </div>
@@ -395,11 +463,11 @@
     <!-- endbenefits -->
 
     <!-- nights -->
-    <section id="form" class="section form">
+    <section id="form" class="section form bg-white">
       <div class="container">
         <div class="section-header">
           <h3>¡Quiero ser parte!</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet.</p>
+          <p>Para ser parte de Willy's, rellena este formulario y te enviaremos un documento con toda la información que necesitas.</p>
           <div class="divider bg-grey-500 center"></div>
         </div>
         <div class="section-content">
@@ -415,6 +483,12 @@
                 <label for="inputEmail" class="col-md-2 control-label">Email</label>
                 <div class="col-md-8">
                   <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputInvest" class="col-md-2 control-label">Cantidad</label>
+                <div class="col-md-8">
+                  <input type="number" class="form-control" id="inputInvest" placeholder="Cantidad (&euro;)">
                 </div>
               </div>
               <div class="form-group" style="margin-top: 0">
@@ -435,9 +509,10 @@
                   </div>
                 </div>
               </div>-->
+              <!-- @TODO SELECT CON EL PAQUETE -->
               <div class="form-group">
                 <div class="col-md-8 col-md-offset-2">
-                  <button type="submit" class="btn btn-info btn-lg btn-raised">Enviar</button>
+                  <button type="submit" class="btn btn-lg btn-raised bg-amber-700 color-white">Enviar</button>
                 </div>
               </div>
             </fieldset>
@@ -447,9 +522,9 @@
     </section>
     <!-- endnights -->
 
-    <footer class="bg-white">
+    <footer>
         <div class="container">
-            <p>Willy's Brewing Co</p>
+            <p>Willy's Brewing Company 2016</p>
         </div>
     </footer>
 
@@ -459,10 +534,12 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/bower_components/bootstrap-material-design/dist/js/material.js"></script>
     <script src="/bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
     <script src="/bower_components/headroom.js/dist/headroom.js"></script>
     <script src="/bower_components/typed.js/dist/typed.min.js"></script>
+    <script src="/bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

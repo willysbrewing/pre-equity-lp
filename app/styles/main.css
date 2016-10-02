@@ -301,13 +301,18 @@ a:hover, a:focus{
 
 
 @media (min-width: 768px){
-
     .navbar-nav > li > a {
         padding: 25px 20px;
     }
 }
 
 @media (max-width: 767px) {
+
+  .navbar .navbar-collapse, .navbar .navbar-form{
+    background-color: #fff;
+    color: #000;
+  }
+
 
     .navbar-brand img{
       max-width: 150px;
@@ -346,6 +351,11 @@ a:hover, a:focus{
   opacity: 0;
   transition: opacity 5s ease;
 }
+
+/*#header.page-header .countdown{
+  opacity: 0;
+  transition: opacity 5s ease;
+}*/
 .page-header .carousel .carousel-indicators {
   bottom: 60px;
 }
@@ -432,7 +442,7 @@ a:hover, a:focus{
   font: 300 20px "Roboto",sans-serif;
 }
 
-.section .section-header .divider{
+.divider{
   content: '';
   width: 30px;
   height: 5px;
@@ -454,6 +464,48 @@ a:hover, a:focus{
     .section .section-header p{
       font-size: 14px;
     }
+}
+
+.collapse-section{
+  padding: 40px 0;
+}
+.collapse-section .content img{
+  width: 50px;
+  max-width: 50px;
+  min-width: 50px;
+  margin-right: 10px;
+}
+
+.collapse-section .content h4{
+  text-transform: uppercase;
+}
+
+/* collapse natural */
+#collapse-natural .collapse-section{
+
+}
+
+#collapse-natural .collapse-section .content{
+
+}
+
+#collapse-natural .collapse-section .content p{
+  clear: both;
+}
+
+/* collapse nights */
+#collapse-nights .collapse-section{
+
+}
+
+#collapse-nights .collapse-section .content h4{
+  font-size: 22px;
+}
+
+#collapse-nights .collapse-section .content ul{
+  font-size: 16px;
+  list-style-type: circle;
+  padding: 0 0 0 15px;
 }
 
 /* Promo */
@@ -497,6 +549,7 @@ a:hover, a:focus{
 .section.full .display{
     height: 450px;
     background-size: cover;
+    background-position: center center;
 }
 
 .section.full .content{
@@ -538,8 +591,8 @@ a:hover, a:focus{
   .section.nights{
   }
   .section.nights iframe{
-    min-width: auto;
-    min-height: auto;
+    min-width: initial;
+    min-height: initial;
   }
 }
 
