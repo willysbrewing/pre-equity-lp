@@ -59,7 +59,8 @@ a:hover, a:focus{
 
 /* Brand */
 .font-brand{
-    font-family: 'Pacifico';
+    font-family: 'BioRhyme';
+    text-transform: uppercase;
 }
 
 /* Material */
@@ -279,7 +280,7 @@ a:hover, a:focus{
 
 .navbar .navbar-brand{
     float: right;
-    font-family: 'Pacifico';
+    font-family: 'BioRhyme';
     padding: 0;
     height: auto;
     height: 50px;
@@ -330,7 +331,7 @@ a:hover, a:focus{
 
 /* Header */
 #header.page-header {
-  background-image: url("../images/party-3.jpg");
+  background-image: url("../images/pour.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
@@ -365,11 +366,15 @@ a:hover, a:focus{
 }
 .page-header .title{
   color: #FFFFFF;
-  font-size: 120px;
+  font-size: 60px;
 }
+.page-header .title .font-brand{
+  font-size: 100px;
+}
+
 .page-header .subtitle {
   color: #FFFFFF;
-  font-size: 80px;
+  font-size: 50px;
 }
 .page-header.header-small {
   height: 65vh;
@@ -396,7 +401,7 @@ a:hover, a:focus{
   transition: 5s ease;
 }
 .header-filter.changed::before {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .header-filter .container {
   z-index: 2;
@@ -435,11 +440,11 @@ a:hover, a:focus{
 
 .section .section-header h3{
   text-transform: uppercase;
-  font: 600 48px "Roboto",sans-serif;
+  font: 600 48px "Open Sans",sans-serif;
 }
 
 .section .section-header p{
-  font: 300 20px "Roboto",sans-serif;
+  font: 300 20px "Open Sans",sans-serif;
 }
 
 .divider{
@@ -494,18 +499,24 @@ a:hover, a:focus{
 }
 
 /* collapse nights */
-#collapse-nights .collapse-section{
-
+#collapse-nights .item .collapse-section{
+  padding: 100px 0;
+  min-height: 450px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-#collapse-nights .collapse-section .content h4{
-  font-size: 22px;
+#collapse-nights .item{
+  background-size: cover;
+  background-position: center;
 }
 
-#collapse-nights .collapse-section .content ul{
-  font-size: 16px;
-  list-style-type: circle;
-  padding: 0 0 0 15px;
+#collapse-nights .item .collapse-section .content h4{
+  font-size: 80px;
+}
+
+#collapse-nights .item .collapse-section .content p{
+  font-size: 30px;
+  font-style: italic;
 }
 
 /* Promo */
@@ -514,9 +525,9 @@ a:hover, a:focus{
 }
 
 .section.promo .claim{
-  font-size: 24px;
+  font-size: 28px;
+  text-transform: uppercase;
   color: #fff;
-  font-style: italic;
 }
 
 .section.promo .btn{
@@ -553,7 +564,7 @@ a:hover, a:focus{
 }
 
 .section.full .content{
-    padding: 100px 40px;
+    padding: 60px 40px;
 }
 
 .section.full .content .title{
