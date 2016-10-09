@@ -32,6 +32,7 @@ a:hover, a:focus{
 .margin-20-last{margin:20px 0;}
 .margin-15{margin:15px 0;}
 .margin-10{margin:10px 0;}
+.margin-t-40{margin-top: 40px;}
 .margin-l-20{margin-left:20px}
 .margin-l-15{margin-left:15px}
 .margin-l-10{margin-left:10px}
@@ -215,6 +216,18 @@ a:hover, a:focus{
   color: #000000;
   border: 1px solid #000000;
   transition: all 1s ease;
+}
+
+/**
+* circle
+*/
+.circle-small{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
 }
 
 /**
@@ -416,10 +429,13 @@ a:hover, a:focus{
     padding-top: 10vh;
   }
   .page-header .title{
-    font-size: 70px;
+    font-size: 40px;
+  }
+  .page-header .title .font-brand{
+    font-size: 60px;
   }
   .page-header .subtitle {
-    font-size: 32px;
+    font-size: 25px;
   }
 }
 
@@ -498,7 +514,15 @@ a:hover, a:focus{
   clear: both;
 }
 
+#collapse-natural .collapse-section .content h4{
+  color: #000;
+  font-weight: bold;
+}
+
 /* collapse nights */
+#collapse-nights .container{
+  max-width: 800px;
+}
 #collapse-nights .item .collapse-section{
   padding: 100px 0;
   min-height: 450px;
@@ -511,12 +535,25 @@ a:hover, a:focus{
 }
 
 #collapse-nights .item .collapse-section .content h4{
-  font-size: 80px;
+  font-size: 70px;
 }
 
 #collapse-nights .item .collapse-section .content p{
   font-size: 30px;
   font-style: italic;
+}
+
+@media (max-width: 767px) {
+  #collapse-nights .item .collapse-section{
+    padding: 80px 0;
+    min-height: 300px;
+  }
+  #collapse-nights .item .collapse-section .content h4{
+    font-size: 40px;
+  }
+  #collapse-nights .item .collapse-section .content p{
+    font-size: 16px;
+  }
 }
 
 /* Promo */
@@ -564,7 +601,7 @@ a:hover, a:focus{
 }
 
 .section.full .content{
-    padding: 60px 40px;
+    padding: 40px;
 }
 
 .section.full .content .title{
@@ -578,10 +615,32 @@ a:hover, a:focus{
 
 @media (max-width: 767px) {
   .section.full .display{
-      height: 180px;
+      height: 240px;
   }
   .section.full .content{
       padding: 40px 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .section.full .display{
+      height: 500px;
+  }
+}
+
+/* Bemore */
+#bemore.section{
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  #bemore.section.full .display{
+    height: 450px;
+  }
+}
+
+@media (min-width: 992px) {
+  #bemore.section.full .display{
+    height: 380px;
   }
 }
 
@@ -636,11 +695,28 @@ a:hover, a:focus{
   font-size: 28px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .section.benefits .card{
     margin: 20px 0;
   }
 }
+
+/* adventages */
+#adventages.section{
+
+}
+
+#adventages.section .section-body h4{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+}
+
+#adventages.section .section-body p{
+  
+}
+
+
 
 
 /* footer */
