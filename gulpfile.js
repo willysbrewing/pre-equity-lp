@@ -88,6 +88,14 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
+gulp.task('icons', () => {
+  return gulp.src([
+    'app/icons/*'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist/icons'));
+});
+
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
@@ -153,7 +161,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'icons'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

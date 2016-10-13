@@ -1,8 +1,9 @@
 'use strict';
 (function() {
 
+  const database = firebase.database();
+
     $(function(){
-        console.log = function() {}
 
         /* Functions */
         function getCookie(cname) {
@@ -72,12 +73,52 @@
               }
             });
 
-            // countdown
-            /*$("#promo .countdown").countdown("2016/11/01", function(event) {
-              $(this).text(
-                event.strftime('%D days %H:%M:%S')
-              );
-            });*/
+            // Form
+            var form = document.getElementById('register-form');
+            if (form.attachEvent) {
+                form.attachEvent('submit', processForm);
+            } else {
+                form.addEventListener('submit', processForm);
+            }
+
+            function processForm(e) {
+              if (e.preventDefault) e.preventDefault();
+
+              var processing = document.getElementById('processing-form');
+              processing.style.display = 'block';
+
+              try{
+
+                var form = document.getElementById('register-form');
+                var name = form.querySelector('#inputName').value;
+                var email = form.querySelector('#inputEmail').value;
+                var stocks = form.querySelector('#selectStocks').value;
+
+                if(name && email && stocks){
+                  var data = {name:name, email:email, stocks:stocks};
+                  firebase.auth().onAuthStateChanged(function(user) {
+                    if (user) {
+                      data.uid = user.uid;
+                      sendRequest(data);
+                      processing.style.display = 'none';
+                      var success = document.getElementById('success-form');
+                      success.style.display = 'block';
+                    }
+                  });
+                  // Anonymous Sign In
+                  firebase.auth().signInAnonymously();
+                }
+
+              }
+              catch(e){}
+              return false;
+            }
+
+            function sendRequest(data){
+              database.ref('preequity/users/'+data.uid).set(data);
+            }
+
+
 
         }); // End of window load
 

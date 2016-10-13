@@ -23,6 +23,35 @@ a:hover, a:focus{
     text-decoration: none;
 }
 
+/* Material */
+.form-control, .form-group .form-control{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#212121)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+  background-image: -webkit-linear-gradient(#212121, #212121), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -o-linear-gradient(#212121, #212121), -o-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#212121, #212121), linear-gradient(#D2D2D2, #D2D2D2);
+}
+
+.form-group.is-focused .form-control{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#212121)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+  background-image: -webkit-linear-gradient(#212121, #212121), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -o-linear-gradient(#212121, #212121), -o-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#212121, #212121), linear-gradient(#D2D2D2, #D2D2D2);
+}
+
+.form-group.is-focused label, .form-group.is-focused label.control-label{
+  color: #212121;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check, label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check{
+  color: #212121;
+  border-color: #212121;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check:before, label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check:before{
+  color: #212121;
+}
+
+
 /* Utils */
 .padding0{padding:0;}
 .margin0{margin:0;}
@@ -60,8 +89,9 @@ a:hover, a:focus{
 
 /* Brand */
 .font-brand{
-    font-family: 'BioRhyme';
+    /*font-family: 'BioRhyme';*/
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* Material */
@@ -293,7 +323,6 @@ a:hover, a:focus{
 
 .navbar .navbar-brand{
     float: right;
-    font-family: 'BioRhyme';
     padding: 0;
     height: auto;
     height: 50px;
@@ -347,6 +376,7 @@ a:hover, a:focus{
   background-image: url("../images/pour.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-position: center center;
   height: 100vh;
   min-height: 520px;
   margin: 0;
@@ -713,10 +743,23 @@ a:hover, a:focus{
 }
 
 #adventages.section .section-body p{
-  
+
 }
 
+#form{
+}
 
+#form #processing-form{
+  margin: 40px 0;
+}
+
+#form #success-form{
+  margin: 40px 0;
+}
+
+#form #success-form .alert.alert-dismissible.alert-success{
+  background-color: #00C853;
+}
 
 
 /* footer */
