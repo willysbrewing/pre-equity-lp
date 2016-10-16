@@ -1,12 +1,18 @@
 language: node_js
 node_js:
   - "6.0"
+branches:
+  only:
+    - master
+notifications:
+  slack: willysbrewing:sbY2heRtEqq1ukQ804xRgymZ
+install:
+  - npm install -g firebase-tools
 script:
   - echo "Building"
   - npm install
   - bower install
   - gulp build
-install:
-  - npm install -g firebase-tools
 after_success:
+  - firebase use willys-4fbc0
   - firebase deploy --token $FIREBASE_TOKEN
