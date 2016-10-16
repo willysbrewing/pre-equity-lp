@@ -653,7 +653,7 @@ a:hover, a:focus{
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .section.full .display{
-      height: 500px;
+      height: 650px;
   }
 }
 
@@ -664,15 +664,10 @@ a:hover, a:focus{
 
 @media (min-width: 768px) and (max-width: 991px){
   #bemore.section.full .display{
-    height: 450px;
+    height: 550px;
   }
 }
 
-@media (min-width: 992px) {
-  #bemore.section.full .display{
-    height: 380px;
-  }
-}
 
 /* Night */
 .section.nights{
@@ -746,6 +741,13 @@ a:hover, a:focus{
 
 }
 
+/* 404 */
+.section.fourhundredfour{
+  padding: 160px 0;
+}
+
+
+/* Form */
 #form{
 }
 
@@ -765,4 +767,14 @@ a:hover, a:focus{
 /* footer */
 footer {
     padding: 40px 0;
+}
+
+
+/* boost */
+.boost{
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  padding: 10px;
+  z-index: 9999;
 }

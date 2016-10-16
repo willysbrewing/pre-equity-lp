@@ -42,80 +42,84 @@
             // init material
             $.material.init()
 
-            // init nav
-            var myElement = document.querySelector('#main-nav');
-            Headroom.options.offset = 70;
-            var headroom  = new Headroom(myElement);
-            headroom.init();
+            /* IF INDEX PAGE */
+            if(PAGE === 'index'){
 
-            // init smooth links
-            $('a.smooth').click(function(e) {
-                e.preventDefault();
-                var $link = $(this);
-                var anchor = $link.attr('href');
-                $('html, body').stop().animate({
-                    scrollTop : $(anchor).offset().top
-                }, 500);
-                return false;
-            });
+              // init nav
+              var myElement = document.querySelector('#main-nav');
+              Headroom.options.offset = 70;
+              var headroom  = new Headroom(myElement);
+              headroom.init();
 
-            // init header typewriter
-            $('#header #header-title').typed({
-              stringsElement: $('#header #header-typed-title'),
-              typeSpeed: 100,
-              startDelay: 50,
-              callback: function(){
-                $('#header #header-subtitle').typed({
-                  stringsElement: $('#header #header-typed-subtitle'),
-                  typeSpeed: 100,
-                  callback: boostHeader
-                });
-              }
-            });
+              // init smooth links
+              $('a.smooth').click(function(e) {
+                  e.preventDefault();
+                  var $link = $(this);
+                  var anchor = $link.attr('href');
+                  $('html, body').stop().animate({
+                      scrollTop : $(anchor).offset().top
+                  }, 500);
+                  return false;
+              });
 
-            // Form
-            var form = document.getElementById('register-form');
-            if (form.attachEvent) {
-                form.attachEvent('submit', processForm);
-            } else {
-                form.addEventListener('submit', processForm);
-            }
-
-            function processForm(e) {
-              if (e.preventDefault) e.preventDefault();
-
-              var processing = document.getElementById('processing-form');
-              processing.style.display = 'block';
-
-              try{
-
-                var form = document.getElementById('register-form');
-                var name = form.querySelector('#inputName').value;
-                var email = form.querySelector('#inputEmail').value;
-                var stocks = form.querySelector('#selectStocks').value;
-
-                if(name && email && stocks){
-                  var data = {name:name, email:email, stocks:stocks};
-                  firebase.auth().onAuthStateChanged(function(user) {
-                    if (user) {
-                      data.uid = user.uid;
-                      sendRequest(data);
-                      processing.style.display = 'none';
-                      var success = document.getElementById('success-form');
-                      success.style.display = 'block';
-                    }
+              // init header typewriter
+              $('#header #header-title').typed({
+                stringsElement: $('#header #header-typed-title'),
+                typeSpeed: 100,
+                startDelay: 50,
+                callback: function(){
+                  $('#header #header-subtitle').typed({
+                    stringsElement: $('#header #header-typed-subtitle'),
+                    typeSpeed: 100,
+                    callback: boostHeader
                   });
-                  // Anonymous Sign In
-                  firebase.auth().signInAnonymously();
                 }
+              });
 
+              // Form
+              var form = document.getElementById('register-form');
+              if (form.attachEvent) {
+                  form.attachEvent('submit', processForm);
+              } else {
+                  form.addEventListener('submit', processForm);
               }
-              catch(e){}
-              return false;
-            }
 
-            function sendRequest(data){
-              database.ref('preequity/users/'+data.uid).set(data);
+              function processForm(e) {
+                if (e.preventDefault) e.preventDefault();
+
+                try{
+                  var form = document.getElementById('register-form');
+                  var name = form.querySelector('#inputName').value;
+                  var email = form.querySelector('#inputEmail').value;
+                  var stocks = form.querySelector('#selectStocks').value;
+                  var policy = form.querySelector('#policy').checked;
+
+                  if(name && email && stocks && policy){
+                    var processing = document.getElementById('processing-form');
+                    processing.style.display = 'block';
+
+                    var data = {name:name, email:email, stocks:stocks};
+                    firebase.auth().onAuthStateChanged(function(user) {
+                      if (user) {
+                        data.uid = user.uid;
+                        sendRequest(data);
+                        processing.style.display = 'none';
+                        var success = document.getElementById('success-form');
+                        success.style.display = 'block';
+                      }
+                    });
+                    // Anonymous Sign In
+                    firebase.auth().signInAnonymously();
+                  }
+
+                }
+                catch(e){}
+                return false;
+              }
+
+              function sendRequest(data){
+                database.ref('preequity/users/'+data.uid).set(data);
+              }
             }
 
 
