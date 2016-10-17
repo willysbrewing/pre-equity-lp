@@ -106,6 +106,10 @@
                         processing.style.display = 'none';
                         var success = document.getElementById('success-form');
                         success.style.display = 'block';
+                        try{
+                          dataLayer.push({'event': 'lead_real'});
+                        }
+                        catch(e){}
                       }
                     });
                     // Anonymous Sign In
