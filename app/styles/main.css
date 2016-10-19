@@ -89,9 +89,10 @@ a:hover, a:focus{
 
 /* Brand */
 .font-brand{
-    /*font-family: 'BioRhyme';*/
+    font-family: 'Montserrat';
     text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 /* Material */
@@ -382,6 +383,7 @@ a:hover, a:focus{
   margin: 0;
   padding: 0;
   border: 0;
+  text-align: center;;
 }
 #header.page-header.gradient {
   background: #FFD54F; /* For browsers that do not support gradients */
@@ -410,6 +412,7 @@ a:hover, a:focus{
 .page-header .title{
   color: #FFFFFF;
   font-size: 60px;
+  text-transform: uppercase;
 }
 .page-header .title .font-brand{
   font-size: 100px;
@@ -418,6 +421,7 @@ a:hover, a:focus{
 .page-header .subtitle {
   color: #FFFFFF;
   font-size: 50px;
+  text-transform: uppercase;
 }
 .page-header.header-small {
   height: 65vh;
