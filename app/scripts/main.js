@@ -31,6 +31,20 @@
           //$('#header .countdown').css('opacity', '1');
         }
 
+        // init header typewriter
+        $('#header #header-title').typed({
+          stringsElement: $('#header #header-typed-title'),
+          typeSpeed: 100,
+          startDelay: 50,
+          callback: function(){
+            $('#header #header-subtitle').typed({
+              stringsElement: $('#header #header-typed-subtitle'),
+              typeSpeed: 100,
+              callback: boostHeader
+            });
+          }
+        });
+
         // NAVBAR Toggle Bug
         //$('.navbar-toggle').on('click', function () {
         //  $($(this).data('target')).collapse('toggle');
@@ -60,20 +74,6 @@
                       scrollTop : $(anchor).offset().top
                   }, 500);
                   return false;
-              });
-
-              // init header typewriter
-              $('#header #header-title').typed({
-                stringsElement: $('#header #header-typed-title'),
-                typeSpeed: 100,
-                startDelay: 50,
-                callback: function(){
-                  $('#header #header-subtitle').typed({
-                    stringsElement: $('#header #header-typed-subtitle'),
-                    typeSpeed: 100,
-                    callback: boostHeader
-                  });
-                }
               });
 
               // Form
@@ -122,11 +122,9 @@
               }
 
               function sendRequest(data){
-                database.ref('preequity/users/'+data.uid).set(data);
+                database.ref('preequity/leads/').push(data);
               }
             }
-
-
 
         }); // End of window load
 
