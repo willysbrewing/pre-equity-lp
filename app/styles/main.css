@@ -383,7 +383,7 @@ a:hover, a:focus{
   margin: 0;
   padding: 0;
   border: 0;
-  text-align: center;;
+  text-align: center;
 }
 #header.page-header.gradient {
   background: #FFD54F; /* For browsers that do not support gradients */
