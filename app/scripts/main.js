@@ -107,6 +107,7 @@
                         var success = document.getElementById('success-form');
                         success.style.display = 'block';
                         try{
+                          sendEmail(data);
                           dataLayer.push({'event': 'lead_real'});
                         }
                         catch(e){}
@@ -124,6 +125,38 @@
               function sendRequest(data){
                 database.ref('preequity/leads/').push(data);
               }
+              function sendEmail(data){
+                var url = "https://notifications.api.willysbrewing.com/mail/send";
+                var q = new XMLHttpRequest();
+                q.open('POST', url, true);
+                q.setRequestHeader('Content-Type', 'application/json');
+                q.onreadystatechange = function(){
+                  if(this.readyState === 4){
+                    if(this.status.toString()[0] == "2"){
+                      // ok
+                    }
+                    else if(this.status.toString()[0] == "4" || this.status.toString()[0] == "5"){
+                      // error
+                    }
+                    else{
+                      // foo
+                    }
+                  }
+                };
+                var payload = {
+                  "recipient": data.email,
+                  "subject": "",
+                  "content": "",
+                  "template":{
+                    "id": "c348a464-4240-4cf4-9c88-7b2c892070d7",
+                    "data":{
+                      "name": data.name
+                    }
+                  }
+                };
+                q.send(JSON.stringify(payload));
+              }
+
             }
 
         }); // End of window load
