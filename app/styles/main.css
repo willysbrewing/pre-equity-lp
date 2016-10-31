@@ -281,10 +281,25 @@ a:hover, a:focus{
     color: #000;
 }
 
+.headroom--pinned {
+    transform: translateY(0%);
+    background-color: #fff !important;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    color: #000;
+}
+
 .headroom--unpinned {
     transform: translateY(-100%);
     background-color: #fff !important;
     color: #000;
+}
+
+.headroom--top .black-logo{
+  display: none;
+}
+
+.headroom--not-top .white-logo{
+  display: none;
 }
 
 .headroom--pinned.navbar .navbar-brand, .headroom--unpinned.navbar .navbar-brand {
@@ -331,6 +346,11 @@ a:hover, a:focus{
     color: #fff;
 }
 
+.navbar-brand img{
+  width: 60px;
+  max-width: 60px;
+}
+
 .navbar, .navbar.navbar-default{
     background-color: rgba(0,0,0,0);
 }
@@ -359,7 +379,8 @@ a:hover, a:focus{
 
 
     .navbar-brand img{
-      max-width: 150px;
+      width: 45px;
+      max-width: 45px;
     }
 
     .navbar .navbar-container{
