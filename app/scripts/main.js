@@ -91,14 +91,14 @@
                   var form = document.getElementById('register-form');
                   var name = form.querySelector('#inputName').value;
                   var email = form.querySelector('#inputEmail').value;
-                  var stocks = form.querySelector('#selectStocks').value;
+                  //var stocks = form.querySelector('#selectStocks').value;
                   var policy = form.querySelector('#policy').checked;
 
-                  if(name && email && stocks && policy){
+                  if(name && email && policy){
                     var processing = document.getElementById('processing-form');
                     processing.style.display = 'block';
 
-                    var data = {name:name, email:email, stocks:stocks};
+                    var data = {name:name, email:email};
                     firebase.auth().onAuthStateChanged(function(user) {
                       if (user) {
                         data.uid = user.uid;
