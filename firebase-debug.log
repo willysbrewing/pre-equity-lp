@@ -1,0 +1,14 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/6.3.1/bin/node /usr/local/bin/firebase serve
+[debug] CLI Version:  3.0.8
+[debug] Platform:     darwin
+[debug] Node Version: v6.3.1
+[debug] Time:         Fri Nov 04 2016 18:21:58 GMT+0100 (CET)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /Users/Sergio/willys/git/pre-equity-lp
+[info] Public Directory: dist
+[info] 
+[info] Server listening at: http://localhost:5000
