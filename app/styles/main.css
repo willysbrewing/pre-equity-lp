@@ -19,6 +19,10 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4{
     max-width: 980px;
 }
 
+a{
+    color: #000;
+}
+
 a:hover, a:focus{
     text-decoration: none;
 }
@@ -245,6 +249,23 @@ a:hover, a:focus{
   text-decoration: none;
   background: #fff;
   color: #000000;
+  border: 1px solid #000000;
+  transition: all 1s ease;
+}
+
+.cta-alt a{
+  max-width: 240px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0);
+  color: #000;
+  border: 1px solid #000;
+  text-transform: uppercase;
+}
+
+.cta-alt a:hover, .cta a:focus{
+  text-decoration: none;
+  background: #000;
+  color: #fff;
   border: 1px solid #000000;
   transition: all 1s ease;
 }
@@ -769,6 +790,11 @@ a:hover, a:focus{
 /* 404 */
 .section.fourhundredfour{
   padding: 160px 0;
+}
+
+/* policy */
+.section.policy{
+  padding: 40px 0 80px 0;
 }
 
 
