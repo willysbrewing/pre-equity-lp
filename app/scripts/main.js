@@ -31,6 +31,21 @@
           //$('#header .countdown').css('opacity', '1');
         }
 
+        (function(){
+          function hidePolicy(){
+            $('.cookies').hide();
+          }
+          if(parseInt(getCookie('wb_p')) === 1){
+            hidePolicy();
+          }
+          else {
+            setCookie('wb_p', 1, 365);
+            $('.cookies .close').click(function() {
+              $('.cookies').fadeOut();
+            })
+          }
+        })();
+
         // init material
         $.material.init();
 

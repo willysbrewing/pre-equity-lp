@@ -25,6 +25,7 @@ a{
 
 a:hover, a:focus{
     text-decoration: none;
+    color: #000;
 }
 
 /* Material */
@@ -112,6 +113,28 @@ a:hover, a:focus{
 
 .modal-body p{
     font-size: 12px;
+}
+
+/* Cookies */
+.cookies {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    z-index: 99;
+    padding: 10px 40px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+.cookies .close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    opacity: 1;
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 16px;
 }
 
 /* Parallax */
