@@ -833,8 +833,55 @@ a:hover, a:focus{
   margin: 40px 0;
 }
 
-#form #success-form .alert.alert-dismissible.alert-success{
-  background-color: #00C853;
+#form #success-form .box{
+  padding: 10px 20px 20px 20px;
+}
+
+#form #success-form .box .claim{
+  text-align: center;
+}
+
+#form #success-form .box .claim h3{
+  text-transform: uppercase;
+  font: 600 28px "Open Sans",sans-serif;
+}
+
+#form #success-form .box .claim h4{
+  font: 300 18px "Open Sans",sans-serif;
+}
+
+
+
+.wb-card{
+  min-height: 300px;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+.wb-card .card-img{
+  min-height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.wb-card .card-img .overlay{
+  min-height: 180px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wb-card .card-img .card-image-title{
+  padding: 10px;
+  color: #fff;
+}
+
+.wb-card .card-body{
+  padding: 10px 10px 20px 10px;
+}
+
+.wb-card .card-body .cta{
+  margin: 10px 0 0 0;
+  padding: 10px;
+  font-size: 16px;
 }
 
 

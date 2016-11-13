@@ -109,6 +109,7 @@
                     }
                     database.ref('preequity/leads/').push(data).then(function(){
                       processing.style.display = 'none';
+                      form.style.display = 'none';
                       var success = document.getElementById('success-form');
                       success.style.display = 'block';
                       try{
@@ -122,7 +123,6 @@
                     });
                   });
                 }
-
               } catch(e){}
               return false;
             }
