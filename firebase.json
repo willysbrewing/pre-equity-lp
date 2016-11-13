@@ -10,16 +10,6 @@
       "package.json",
       "README.md"
     ],
-    "rewrites": [
-       {
-        "source": "/staff/**",
-        "destination": "/staff/index.html"
-      },
-      {
-       "source": "/profile/**",
-       "destination": "/profile/index.html"
-     }
-   ],
    "headers": [
       {
         "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",

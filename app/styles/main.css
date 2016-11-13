@@ -19,8 +19,13 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4{
     max-width: 980px;
 }
 
+a{
+    color: #000;
+}
+
 a:hover, a:focus{
     text-decoration: none;
+    color: #000;
 }
 
 /* Material */
@@ -108,6 +113,28 @@ a:hover, a:focus{
 
 .modal-body p{
     font-size: 12px;
+}
+
+/* Cookies */
+.cookies {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 10px 40px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+.cookies .close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    opacity: 1;
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 16px;
 }
 
 /* Parallax */
@@ -245,6 +272,23 @@ a:hover, a:focus{
   text-decoration: none;
   background: #fff;
   color: #000000;
+  border: 1px solid #000000;
+  transition: all 1s ease;
+}
+
+.cta-alt a{
+  max-width: 240px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0);
+  color: #000;
+  border: 1px solid #000;
+  text-transform: uppercase;
+}
+
+.cta-alt a:hover, .cta a:focus{
+  text-decoration: none;
+  background: #000;
+  color: #fff;
   border: 1px solid #000000;
   transition: all 1s ease;
 }
@@ -771,6 +815,11 @@ a:hover, a:focus{
   padding: 160px 0;
 }
 
+/* policy */
+.section.policy{
+  padding: 40px 0 80px 0;
+}
+
 
 /* Form */
 #form{
@@ -784,8 +833,55 @@ a:hover, a:focus{
   margin: 40px 0;
 }
 
-#form #success-form .alert.alert-dismissible.alert-success{
-  background-color: #00C853;
+#form #success-form .box{
+  padding: 10px 20px 20px 20px;
+}
+
+#form #success-form .box .claim{
+  text-align: center;
+}
+
+#form #success-form .box .claim h3{
+  text-transform: uppercase;
+  font: 600 28px "Open Sans",sans-serif;
+}
+
+#form #success-form .box .claim h4{
+  font: 300 18px "Open Sans",sans-serif;
+}
+
+
+
+.wb-card{
+  min-height: 300px;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+.wb-card .card-img{
+  min-height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.wb-card .card-img .overlay{
+  min-height: 180px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wb-card .card-img .card-image-title{
+  padding: 10px;
+  color: #fff;
+}
+
+.wb-card .card-body{
+  padding: 10px 10px 20px 10px;
+}
+
+.wb-card .card-body .cta{
+  margin: 10px 0 0 0;
+  padding: 10px;
+  font-size: 16px;
 }
 
 
