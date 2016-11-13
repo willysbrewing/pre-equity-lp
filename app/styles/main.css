@@ -117,10 +117,10 @@ a:hover, a:focus{
 
 /* Cookies */
 .cookies {
+    display: none;
     position: fixed;
     bottom: 0;
     width: 100%;
-    display: block;
     z-index: 99;
     padding: 10px 40px;
     color: #fff;

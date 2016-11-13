@@ -32,13 +32,11 @@
         }
 
         (function(){
-          function hidePolicy(){
-            $('.cookies').hide();
+          function showPolicy(){
+            $('.cookies').show();
           }
-          if(parseInt(getCookie('wb_p')) === 1){
-            hidePolicy();
-          }
-          else {
+          if(parseInt(getCookie('wb_p')) !== 1){
+            showPolicy();
             setCookie('wb_p', 1, 365);
             $('.cookies .close').click(function() {
               $('.cookies').fadeOut();
@@ -98,40 +96,37 @@
                 var form = document.getElementById('register-form');
                 var name = form.querySelector('#inputName').value;
                 var email = form.querySelector('#inputEmail').value;
-                //var stocks = form.querySelector('#selectStocks').value;
                 var policy = form.querySelector('#policy').checked;
 
                 if(name && email && policy){
                   var processing = document.getElementById('processing-form');
                   processing.style.display = 'block';
 
-                  var data = {name:name, email:email};
-                  firebase.auth().onAuthStateChanged(function(user) {
+                  firebase.auth().signInAnonymously().then(function(user){
+                    var data = {name:name, email:email};
                     if (user) {
                       data.uid = user.uid;
-                      sendRequest(data);
+                    }
+                    database.ref('preequity/leads/').push(data).then(function(){
                       processing.style.display = 'none';
                       var success = document.getElementById('success-form');
                       success.style.display = 'block';
                       try{
+                        // SendMail
                         sendEmail(data);
+
+                        // Track Event
                         dataLayer.push({'event': 'lead_real'});
                       }
                       catch(e){}
-                    }
+                    });
                   });
-                  // Anonymous Sign In
-                  firebase.auth().signInAnonymously();
                 }
 
-              }
-              catch(e){}
+              } catch(e){}
               return false;
             }
 
-            function sendRequest(data){
-              database.ref('preequity/leads/').push(data);
-            }
             function sendEmail(data){
               var url = 'https://notifications.api.willysbrewing.com/mail/send';
               var q = new XMLHttpRequest();
