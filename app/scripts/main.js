@@ -31,6 +31,8 @@
           //$('#header .countdown').css('opacity', '1');
         }
 
+
+
         (function(){
           function showPolicy(){
             $('.cookies').show();
@@ -42,6 +44,11 @@
               $('.cookies').fadeOut();
             })
           }
+          var leads = database.ref("preequity/leads");
+          leads.once('value').then(function(s){
+            var counter = Object.keys(s.val()).length;
+            $(".family-boost .number").html(counter);
+          });
         })();
 
         // init material
@@ -54,21 +61,28 @@
         headroom.init();
 
         // init header typewriter
-        $('#header #header-title').typed({
-          stringsElement: $('#header #header-typed-title'),
-          typeSpeed: 100,
-          startDelay: 50,
-          callback: function(){
-            $('#header #header-subtitle').typed({
-              stringsElement: $('#header #header-typed-subtitle'),
-              typeSpeed: 100,
-              callback: boostHeader
-            });
-          }
-        });
+        // $('#header #header-title').typed({
+        //   stringsElement: $('#header #header-typed-title'),
+        //   typeSpeed: 100,
+        //   startDelay: 50,
+        //   callback: function(){
+        //     $('#header #header-subtitle').typed({
+        //       stringsElement: $('#header #header-typed-subtitle'),
+        //       typeSpeed: 100,
+        //       callback: boostHeader
+        //     });
+        //   }
+        // });
 
         // Do not delay load of page with async functionality: Wait for window load
         window.addEventListener('load',function(){
+
+            // Real Time listener
+            var leads = database.ref("preequity/leads");
+            leads.on('value', function(s){
+              var counter = Object.keys(s.val()).length;
+              $(".family-boost .number").html(counter);
+            });
 
             // init smooth links
             $('a.smooth').click(function(e) {
