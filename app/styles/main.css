@@ -439,7 +439,7 @@ a:hover, a:focus{
 
 /* Header */
 #header.page-header {
-  background-image: url("../images/pour.jpg");
+  background-image: url("../images/nbar.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -448,19 +448,18 @@ a:hover, a:focus{
   margin: 0;
   padding: 0;
   border: 0;
-  text-align: center;
+  text-align: right;
 }
 #header.page-header.gradient {
   background: #FFD54F; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, rgba(250, 250, 250, 0), rgba(33, 33, 33, 1)); /*Safari 5.1-6*/
-  background: -o-linear-gradient(right, rgba(250, 250, 250, 0), rgba(33, 33, 33, 1)); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(right, rgba(250, 250, 250, 0), rgba(33, 33, 33, 1)); /*Fx 3.6-15*/
-  background: linear-gradient(to right, rgba(250, 250, 250, 0), rgba(33, 33, 33, 1)); /*Standard*/
+  background: -webkit-linear-gradient(to bottom right, #E67E22, #F39C12); /*Safari 5.1-6*/
+  background: -o-linear-gradient(to bottom right, #E67E22, #F39C12); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(to bottom right, #E67E22, #F39C12); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom right, #E67E22, #F39C12); /*Standard*/
 }
 
-#header.page-header .cta{
-  opacity: 0;
-  transition: opacity 5s ease;
+#header.page-header .cta a{
+  border: none;
 }
 
 /*#header.page-header .countdown{
@@ -471,16 +470,21 @@ a:hover, a:focus{
   bottom: 60px;
 }
 .page-header .container {
-  padding-top: 20vh;
+  padding-top: 15vh;
   color: #FFFFFF;
+}
+
+.page-header .square {
+  padding: 20px;
+  border: 3px solid #fff;
 }
 .page-header .title{
   color: #FFFFFF;
-  font-size: 60px;
+  font-size: 40px;
   text-transform: uppercase;
 }
 .page-header .title .font-brand{
-  font-size: 100px;
+  font-size: 30px;
 }
 
 .page-header .subtitle {
@@ -509,7 +513,7 @@ a:hover, a:focus{
   content: "";
 }
 .header-filter::before {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.6);
   transition: 5s ease;
 }
 .header-filter.changed::before {
@@ -518,6 +522,12 @@ a:hover, a:focus{
 .header-filter .container {
   z-index: 2;
   position: relative;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .page-header .subtitle{
+    font-size: 44px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -531,10 +541,10 @@ a:hover, a:focus{
     font-size: 40px;
   }
   .page-header .title .font-brand{
-    font-size: 60px;
+    font-size: 30px;
   }
   .page-header .subtitle {
-    font-size: 25px;
+    font-size: 24px;
   }
 }
 
@@ -890,6 +900,41 @@ footer {
     padding: 40px 0;
 }
 
+
+.family-boost{
+  position: absolute;
+  top: 150px;
+  left: 0;
+  z-index: 3;
+  font-size: 16px;
+}
+
+.family-boost .content{
+  padding: 10px 20px 10px 10px;
+}
+
+.family-boost .content i{
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  padding: 3px;
+}
+
+.family-boost .content .text{
+  padding-left: 10px;
+  font-style: italic;
+}
+
+@media (max-width: 767px) {
+  .family-boost{
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
 
 /* boost */
 .boost{
