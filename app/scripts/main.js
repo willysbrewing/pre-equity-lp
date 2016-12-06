@@ -44,9 +44,10 @@
               $('.cookies').fadeOut();
             })
           }
-          var leads = database.ref("preequity/leads");
-          leads.once('value').then(function(s){
-            var counter = Object.keys(s.val()).length;
+          var leadsCounter = database.ref("preequity/leadsCounter");
+          leadsCounter.once('value').then(function(s){
+            //var counter = Object.keys(s.val()).length;
+            var counter = parseInt(s.val())+15;
             $(".family-boost .number").html(counter);
           });
         })();
@@ -78,11 +79,11 @@
         window.addEventListener('load',function(){
 
             // Real Time listener
-            var leads = database.ref("preequity/leads");
-            leads.on('value', function(s){
-              var counter = Object.keys(s.val()).length;
-              $(".family-boost .number").html(counter);
-            });
+            // var leadsCounter = database.ref("preequity/leadsCounter");
+            // leadsCounter.on('value', function(s){
+            //   var counter = Object.keys(s.val()).length;
+            //   $(".family-boost .number").html(counter);
+            // });
 
             // init smooth links
             $('a.smooth').click(function(e) {
@@ -122,6 +123,9 @@
                       data.uid = user.uid;
                     }
                     database.ref('preequity/leads/').push(data).then(function(){
+                      database.ref('preequity/leadsCounter/').transaction(function(counter){
+                        return counter+1;
+                      });
                       processing.style.display = 'none';
                       form.style.display = 'none';
                       var success = document.getElementById('success-form');
