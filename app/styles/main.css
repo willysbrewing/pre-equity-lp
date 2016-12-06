@@ -342,6 +342,10 @@ a:hover, a:focus{
   display: none;
 }
 
+.headroom--not-top .black-logo{
+  display: block !important;
+}
+
 .headroom--not-top .white-logo{
   display: none;
 }
@@ -407,6 +411,9 @@ a:hover, a:focus{
   background-color: transparent;
 }
 
+.navbar .black-logo{
+  display: none;
+}
 
 @media (min-width: 768px){
     .navbar-nav > li > a {
