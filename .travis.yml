@@ -3,7 +3,7 @@ node_js:
   - "6.0"
 branches:
   only:
-    - master
+    - main
 notifications:
   slack: willysbrewing:sbY2heRtEqq1ukQ804xRgymZ
 install:

@@ -446,7 +446,7 @@ a:hover, a:focus{
 
 /* Header */
 #header.page-header {
-  background-image: url("../images/nbar.jpg");
+  background-image: url("../images/festival.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -455,14 +455,12 @@ a:hover, a:focus{
   margin: 0;
   padding: 0;
   border: 0;
-  text-align: right;
+  text-align: center;
 }
 #header.page-header.gradient {
-  background: #FFD54F; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(to bottom right, #E67E22, #F39C12); /*Safari 5.1-6*/
-  background: -o-linear-gradient(to bottom right, #E67E22, #F39C12); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(to bottom right, #E67E22, #F39C12); /*Fx 3.6-15*/
-  background: linear-gradient(to bottom right, #E67E22, #F39C12); /*Standard*/
+  background: -moz-linear-gradient(160deg, #FFC720 0%, #FF5622 100%);
+  background: -webkit-linear-gradient(160deg, #FFC720 0%,#FF5622 100%);
+  background: linear-gradient(160deg, #FFC720 0%, #FF5622 100%);
 }
 
 #header.page-header .cta a{
@@ -487,7 +485,7 @@ a:hover, a:focus{
 }
 .page-header .title{
   color: #FFFFFF;
-  font-size: 40px;
+  font-size: 80px;
   text-transform: uppercase;
 }
 .page-header .title .font-brand{
@@ -496,7 +494,7 @@ a:hover, a:focus{
 
 .page-header .subtitle {
   color: #FFFFFF;
-  font-size: 50px;
+  font-size: 80px;
   text-transform: uppercase;
 }
 .page-header.header-small {
@@ -551,7 +549,7 @@ a:hover, a:focus{
     font-size: 30px;
   }
   .page-header .subtitle {
-    font-size: 24px;
+    font-size: 56px;
   }
 }
 
@@ -910,7 +908,7 @@ footer {
 
 .family-boost{
   position: absolute;
-  top: 150px;
+  top: 120px;
   left: 0;
   z-index: 3;
   font-size: 16px;
